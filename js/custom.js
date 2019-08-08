@@ -101,3 +101,24 @@ createNode.addEventListener('click', function () {
     container.appendChild(li);
 
 });
+
+
+
+function createBubble(name,messageText)
+{
+    var message = document.createElement('li');
+    
+    var nameEl=document.createElement('span');
+    nameEl.textContent=name;
+    message.appendChild(nameEl);
+    
+    var messageEl = document.createElement('p');
+    messageEl.textContent=messageText;
+    message.appendChild(messageEl);
+
+    var timeEl = document.createElement('time');
+    timeEl.textContent='08.08.2019 20:22';
+    message.appendChild(timeEl);
+
+    return message;
+}
